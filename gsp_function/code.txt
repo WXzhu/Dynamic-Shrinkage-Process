@@ -1,0 +1,10 @@
+library(igraph)
+
+# Create a DAG object
+g <- graph_from_adjacency_matrix(matrix(c(0, 1, 0, 0, 0, 0, 0, 1, 0), nrow = 3))
+
+# Moralize the DAG
+moral_graph <- moral_graph(g)
+
+# Plot the moral graph
+plot(moral_graph, main = "Moral Graph")
